@@ -17,7 +17,7 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
   OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
-  object dxBarManager: TdxBarManager
+  object bmMenu: TdxBarManager
     AllowReset = False
     Scaled = False
     Font.Charset = DEFAULT_CHARSET
@@ -90,12 +90,22 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
       ItemLinks = <
         item
           Visible = True
-          ItemName = 'btnCadastroPessoa'
+          ItemName = 'btnAuxiliares'
         end>
     end
-    object btnCadastroPessoa: TdxBarButton
-      Action = ActPessoa
+    object btnCadastroPais: TdxBarButton
+      Action = ActPais
       Category = 0
+    end
+    object btnAuxiliares: TdxBarSubItem
+      Caption = 'Auxiliares'
+      Category = 0
+      Visible = ivAlways
+      ItemLinks = <
+        item
+          Visible = True
+          ItemName = 'btnCadastroPais'
+        end>
     end
     object btnSair: TdxBarButton
       Action = actSair
@@ -112,10 +122,10 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
   object ActionList1: TActionList
     Left = 232
     Top = 104
-    object ActPessoa: TAction
+    object ActPais: TAction
       Category = 'Cadastro'
-      Caption = 'Pessoa'
-      OnExecute = actPessoaExecute
+      Caption = 'Pais'
+      OnExecute = ActPaisExecute
     end
     object actSair: TAction
       Category = 'Sair'

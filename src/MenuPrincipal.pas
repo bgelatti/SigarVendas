@@ -9,21 +9,21 @@ uses
 
 type
   TFrmMenuPrincipal = class(TForm)
-    dxBarManager: TdxBarManager;
+    bmMenu: TdxBarManager;
     dxBarGroup1: TdxBarGroup;
     dxBarGroup2: TdxBarGroup;
     mmPrincipal: TdxBar;
     ActionList1: TActionList;
-    ActPessoa: TAction;
+    ActPais: TAction;
     btnCadastro: TdxBarSubItem;
-    btnCadastroPessoa: TdxBarButton;
+    btnCadastroPais: TdxBarButton;
     actSair: TAction;
     btnSair: TdxBarButton;
+    btnAuxiliares: TdxBarSubItem;
     procedure actSairExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure ActPessoaExecute(Sender: TObject);
+    procedure ActPaisExecute(Sender: TObject);
   private
-    { Private declarations }
   public
     { Public declarations }
   end;
@@ -34,14 +34,14 @@ var
 implementation
 
 uses
-  uDmDao, CadastroPadrao;
+  uDmDao, CadastroPais;
 
 {$R *.dfm}
 
-procedure TFrmMenuPrincipal.ActPessoaExecute(Sender: TObject);
+procedure TFrmMenuPrincipal.ActPaisExecute(Sender: TObject);
 begin
-  Application.CreateForm(TFrmCadastroPadrao, FrmCadastroPadrao);
-  FrmCadastroPadrao.Show;
+  Application.CreateForm(TFrmCadastroPais, FrmCadastroPais);
+  FrmCadastroPais.Show;
 end;
 
 procedure TFrmMenuPrincipal.actSairExecute(Sender: TObject);
