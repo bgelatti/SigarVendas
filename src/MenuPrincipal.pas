@@ -13,16 +13,19 @@ type
     dxBarGroup1: TdxBarGroup;
     dxBarGroup2: TdxBarGroup;
     mmPrincipal: TdxBar;
-    ActionList1: TActionList;
+    ListaAcoesMenuPrincipal: TActionList;
     ActPais: TAction;
     btnCadastro: TdxBarSubItem;
     btnCadastroPais: TdxBarButton;
     actSair: TAction;
     btnSair: TdxBarButton;
     btnAuxiliares: TdxBarSubItem;
+    btnCadastroEstado: TdxBarButton;
+    ActEstado: TAction;
     procedure actSairExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure ActPaisExecute(Sender: TObject);
+    procedure ActEstadoExecute(Sender: TObject);
   private
   public
     { Public declarations }
@@ -34,9 +37,15 @@ var
 implementation
 
 uses
-  uDmDao, CadastroPais;
+  uDmDao, CadastroPais, CadastroEstado;
 
 {$R *.dfm}
+
+procedure TFrmMenuPrincipal.ActEstadoExecute(Sender: TObject);
+begin
+  Application.CreateForm(TFrmCadastroEstado, FrmCadastroEstado);
+  FrmCadastroEstado.Show;
+end;
 
 procedure TFrmMenuPrincipal.ActPaisExecute(Sender: TObject);
 begin

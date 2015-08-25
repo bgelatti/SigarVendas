@@ -104,8 +104,16 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
       ItemLinks = <
         item
           Visible = True
+          ItemName = 'btnCadastroEstado'
+        end
+        item
+          Visible = True
           ItemName = 'btnCadastroPais'
         end>
+    end
+    object btnCadastroEstado: TdxBarButton
+      Action = ActEstado
+      Category = 0
     end
     object btnSair: TdxBarButton
       Action = actSair
@@ -119,7 +127,7 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
         'dxBarGroup1')
     end
   end
-  object ActionList1: TActionList
+  object ListaAcoesMenuPrincipal: TActionList
     Left = 232
     Top = 104
     object ActPais: TAction
@@ -132,6 +140,11 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
       Caption = 'Sair'
       ShortCut = 123
       OnExecute = actSairExecute
+    end
+    object ActEstado: TAction
+      Category = 'Cadastro'
+      Caption = 'Estado'
+      OnExecute = ActEstadoExecute
     end
   end
 end
