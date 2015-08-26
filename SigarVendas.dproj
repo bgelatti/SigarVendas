@@ -138,7 +138,16 @@
             <Form>FrmCadastroEstado</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\SigarComum\src\entidade\Cidade.pas"/>
+        <DCCReference Include="..\SigarComum\src\CadastroCidade.pas">
+            <Form>FrmCadastroCidade</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <None Include="ModelSupport_SigarVendas\default.txaPackage"/>
+        <RcItem Include="..\DevLib\Icones\dodge.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>Icon_1</ResourceId>
+        </RcItem>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -176,6 +185,12 @@
                 <DeployFile LocalName="Win32\Debug\SigarVendas.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>SigarVendas.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="..\DevLib\Icones\dodge.ico" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

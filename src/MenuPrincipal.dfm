@@ -35,6 +35,8 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     Categories.Visibles = (
       True
       True)
+    LookAndFeel.NativeStyle = False
+    LookAndFeel.SkinName = 'DarkSide'
     MenuAnimations = maFade
     PopupMenuLinks = <>
     ShowShortCutInHint = True
@@ -47,13 +49,14 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     DockControlHeights = (
       0
       0
-      26
+      22
       0)
     object mmPrincipal: TdxBar
       AllowClose = False
       AllowCustomizing = False
       AllowQuickCustomizing = False
       AllowReset = False
+      BorderStyle = bbsNone
       Caption = 'MenuBar'
       CaptionButtons = <>
       DockedDockingStyle = dsTop
@@ -104,6 +107,10 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
       ItemLinks = <
         item
           Visible = True
+          ItemName = 'dxBarLargeButton1'
+        end
+        item
+          Visible = True
           ItemName = 'btnCadastroEstado'
         end
         item
@@ -113,6 +120,10 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     end
     object btnCadastroEstado: TdxBarButton
       Action = ActEstado
+      Category = 0
+    end
+    object dxBarLargeButton1: TdxBarLargeButton
+      Action = ActCidade
       Category = 0
     end
     object btnSair: TdxBarButton
@@ -145,6 +156,11 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
       Category = 'Cadastro'
       Caption = 'Estado'
       OnExecute = ActEstadoExecute
+    end
+    object ActCidade: TAction
+      Category = 'Cadastro'
+      Caption = 'Cidade'
+      OnExecute = ActCidadeExecute
     end
   end
 end

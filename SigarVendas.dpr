@@ -1,5 +1,7 @@
 program SigarVendas;
 
+{$R *.dres}
+
 uses
   Vcl.Forms,
   MenuPrincipal in 'src\MenuPrincipal.pas' {FrmMenuPrincipal},
@@ -13,7 +15,9 @@ uses
   Estado in '..\SigarComum\src\entidade\Estado.pas',
   CadastroEstado in '..\SigarComum\src\CadastroEstado.pas' {FrmCadastroEstado},
   Vcl.Themes,
-  Vcl.Styles;
+  Vcl.Styles,
+  Cidade in '..\SigarComum\src\entidade\Cidade.pas',
+  CadastroCidade in '..\SigarComum\src\CadastroCidade.pas' {FrmCadastroCidade};
 
 {$R *.res}
 
