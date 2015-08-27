@@ -143,6 +143,11 @@
             <Form>FrmCadastroCidade</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\SigarComum\Padrao\Entidade\PesquisaGenericaSQL.pas"/>
+        <DCCReference Include="..\SigarComum\Padrao\CadastroPesquisaGenerica.pas">
+            <Form>FrmCadastroPesquisaGenerica</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <None Include="ModelSupport_SigarVendas\default.txaPackage"/>
         <RcItem Include="..\DevLib\Icones\dodge.ico">
             <ResourceType>ICON</ResourceType>

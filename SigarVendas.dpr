@@ -17,7 +17,9 @@ uses
   Vcl.Themes,
   Vcl.Styles,
   Cidade in '..\SigarComum\src\entidade\Cidade.pas',
-  CadastroCidade in '..\SigarComum\src\CadastroCidade.pas' {FrmCadastroCidade};
+  CadastroCidade in '..\SigarComum\src\CadastroCidade.pas' {FrmCadastroCidade},
+  PesquisaGenericaSQL in '..\SigarComum\Padrao\Entidade\PesquisaGenericaSQL.pas',
+  CadastroPesquisaGenerica in '..\SigarComum\Padrao\CadastroPesquisaGenerica.pas' {FrmCadastroPesquisaGenerica};
 
 {$R *.res}
 

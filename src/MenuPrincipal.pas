@@ -5,20 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls, Vcl.ToolWin,
-  Vcl.Menus, dxBar, cxClasses, System.Actions, Vcl.ActnList, dxSkinsCore,
-  dxSkinBlack, dxSkinBlue, dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee,
-  dxSkinDarkRoom, dxSkinDarkSide, dxSkinDevExpressDarkStyle,
-  dxSkinDevExpressStyle, dxSkinFoggy, dxSkinGlassOceans, dxSkinHighContrast,
-  dxSkiniMaginary, dxSkinLilian, dxSkinLiquidSky, dxSkinLondonLiquidSky,
-  dxSkinMcSkin, dxSkinMetropolis, dxSkinMetropolisDark, dxSkinMoneyTwins,
-  dxSkinOffice2007Black, dxSkinOffice2007Blue, dxSkinOffice2007Green,
-  dxSkinOffice2007Pink, dxSkinOffice2007Silver, dxSkinOffice2010Black,
-  dxSkinOffice2010Blue, dxSkinOffice2010Silver, dxSkinOffice2013DarkGray,
-  dxSkinOffice2013LightGray, dxSkinOffice2013White, dxSkinPumpkin, dxSkinSeven,
-  dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus, dxSkinSilver,
-  dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld,
-  dxSkinsDefaultPainters, dxSkinValentine, dxSkinVS2010, dxSkinWhiteprint,
-  dxSkinXmas2008Blue, dxSkinsdxBarPainter;
+  Vcl.Menus, dxBar, cxClasses, System.Actions, Vcl.ActnList, dxSkinLilian,
+  dxSkinsCore, dxSkinsdxBarPainter;
 
 type
   TFrmMenuPrincipal = class(TForm)
@@ -37,11 +25,15 @@ type
     ActEstado: TAction;
     dxBarLargeButton1: TdxBarLargeButton;
     ActCidade: TAction;
+    dxBarSubItem1: TdxBarSubItem;
+    dxBarButton1: TdxBarButton;
+    ActPesquisaGenerica: TAction;
     procedure actSairExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure ActPaisExecute(Sender: TObject);
     procedure ActEstadoExecute(Sender: TObject);
     procedure ActCidadeExecute(Sender: TObject);
+    procedure ActPesquisaGenericaExecute(Sender: TObject);
   private
   public
     { Public declarations }
@@ -53,7 +45,8 @@ var
 implementation
 
 uses
-  uDmDao, CadastroPais, CadastroEstado, CadastroCidade;
+  uDmDao, CadastroPais, CadastroEstado, CadastroCidade,
+  CadastroPesquisaGenerica;
 
 {$R *.dfm}
 
@@ -73,6 +66,12 @@ procedure TFrmMenuPrincipal.ActPaisExecute(Sender: TObject);
 begin
   Application.CreateForm(TFrmCadastroPais, FrmCadastroPais);
   FrmCadastroPais.Show;
+end;
+
+procedure TFrmMenuPrincipal.ActPesquisaGenericaExecute(Sender: TObject);
+begin
+  Application.CreateForm(TFrmCadastroPesquisaGenerica, FrmCadastroPesquisaGenerica);
+  FrmCadastroPesquisaGenerica.Show;
 end;
 
 procedure TFrmMenuPrincipal.actSairExecute(Sender: TObject);

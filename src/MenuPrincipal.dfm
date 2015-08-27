@@ -36,7 +36,7 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
       True
       True)
     LookAndFeel.NativeStyle = False
-    LookAndFeel.SkinName = 'DarkSide'
+    LookAndFeel.SkinName = 'Lilian'
     MenuAnimations = maFade
     PopupMenuLinks = <>
     ShowShortCutInHint = True
@@ -72,6 +72,10 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
         item
           Visible = True
           ItemName = 'btnCadastro'
+        end
+        item
+          Visible = True
+          ItemName = 'dxBarSubItem1'
         end
         item
           Visible = True
@@ -126,6 +130,20 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
       Action = ActCidade
       Category = 0
     end
+    object dxBarSubItem1: TdxBarSubItem
+      Caption = 'Utilit'#225'rios'
+      Category = 0
+      Visible = ivAlways
+      ItemLinks = <
+        item
+          Visible = True
+          ItemName = 'dxBarButton1'
+        end>
+    end
+    object dxBarButton1: TdxBarButton
+      Action = ActPesquisaGenerica
+      Category = 0
+    end
     object btnSair: TdxBarButton
       Action = actSair
       Category = 1
@@ -161,6 +179,11 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
       Category = 'Cadastro'
       Caption = 'Cidade'
       OnExecute = ActCidadeExecute
+    end
+    object ActPesquisaGenerica: TAction
+      Category = 'Utilitarios'
+      Caption = 'Alterar SQL Pesquisas'
+      OnExecute = ActPesquisaGenericaExecute
     end
   end
 end
