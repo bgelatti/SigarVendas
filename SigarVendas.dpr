@@ -19,7 +19,11 @@ uses
   Cidade in '..\SigarComum\src\entidade\Cidade.pas',
   CadastroCidade in '..\SigarComum\src\CadastroCidade.pas' {FrmCadastroCidade},
   PesquisaGenericaSQL in '..\SigarComum\Padrao\Entidade\PesquisaGenericaSQL.pas',
-  CadastroPesquisaGenerica in '..\SigarComum\Padrao\CadastroPesquisaGenerica.pas' {FrmCadastroPesquisaGenerica};
+  CadastroPesquisaGenerica in '..\SigarComum\Padrao\CadastroPesquisaGenerica.pas' {FrmCadastroPesquisaGenerica},
+  Filial in '..\SigarComum\src\entidade\Filial.pas',
+  Bairro in '..\SigarComum\src\entidade\Bairro.pas',
+  FilialEndereco in '..\SigarComum\src\entidade\FilialEndereco.pas',
+  TelefoneFilial in '..\SigarComum\src\entidade\TelefoneFilial.pas';
 
 {$R *.res}
 
