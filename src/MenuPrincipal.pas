@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls, Vcl.ToolWin,
   Vcl.Menus, dxBar, cxClasses, System.Actions, Vcl.ActnList, dxSkinLilian,
-  dxSkinsCore, dxSkinsdxBarPainter;
+  dxSkinsCore, dxSkinsdxBarPainter, Data.DB, MemDS, DBAccess, Uni;
 
 type
   TFrmMenuPrincipal = class(TForm)
@@ -28,6 +28,7 @@ type
     dxBarSubItem1: TdxBarSubItem;
     dxBarButton1: TdxBarButton;
     ActPesquisaGenerica: TAction;
+    UniQuery1: TUniQuery;
     procedure actSairExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure ActPaisExecute(Sender: TObject);

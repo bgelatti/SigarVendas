@@ -186,4 +186,8 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
       OnExecute = ActPesquisaGenericaExecute
     end
   end
+  object UniQuery1: TUniQuery
+    Left = 56
+    Top = 96
+  end
 end
