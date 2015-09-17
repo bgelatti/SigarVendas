@@ -23,7 +23,8 @@ uses
   Filial in '..\SigarComum\src\entidade\Filial.pas',
   Bairro in '..\SigarComum\src\entidade\Bairro.pas',
   FilialEndereco in '..\SigarComum\src\entidade\FilialEndereco.pas',
-  TelefoneFilial in '..\SigarComum\src\entidade\TelefoneFilial.pas';
+  TelefoneFilial in '..\SigarComum\src\entidade\TelefoneFilial.pas',
+  CadastroFilial in '..\SigarComum\src\CadastroFilial.pas' {FrmCadastroFilial};
 
 {$R *.res}
 

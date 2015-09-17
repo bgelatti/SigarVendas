@@ -29,12 +29,15 @@ type
     dxBarButton1: TdxBarButton;
     ActPesquisaGenerica: TAction;
     UniQuery1: TUniQuery;
+    dxBarButton2: TdxBarButton;
+    ActFilial: TAction;
     procedure actSairExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure ActPaisExecute(Sender: TObject);
     procedure ActEstadoExecute(Sender: TObject);
     procedure ActCidadeExecute(Sender: TObject);
     procedure ActPesquisaGenericaExecute(Sender: TObject);
+    procedure ActFilialExecute(Sender: TObject);
   private
   public
     { Public declarations }
@@ -47,7 +50,7 @@ implementation
 
 uses
   uDmDao, CadastroPais, CadastroEstado, CadastroCidade,
-  CadastroPesquisaGenerica;
+  CadastroPesquisaGenerica, CadastroFilial;
 
 {$R *.dfm}
 
@@ -61,6 +64,12 @@ procedure TFrmMenuPrincipal.ActEstadoExecute(Sender: TObject);
 begin
   Application.CreateForm(TFrmCadastroEstado, FrmCadastroEstado);
   FrmCadastroEstado.Show;
+end;
+
+procedure TFrmMenuPrincipal.ActFilialExecute(Sender: TObject);
+begin
+  Application.CreateForm(TFrmCadastroFilial, FrmCadastroFilial);
+  FrmCadastroFilial.Show;
 end;
 
 procedure TFrmMenuPrincipal.ActPaisExecute(Sender: TObject);

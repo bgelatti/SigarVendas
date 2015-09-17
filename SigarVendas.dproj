@@ -152,6 +152,10 @@
         <DCCReference Include="..\SigarComum\src\entidade\Bairro.pas"/>
         <DCCReference Include="..\SigarComum\src\entidade\FilialEndereco.pas"/>
         <DCCReference Include="..\SigarComum\src\entidade\TelefoneFilial.pas"/>
+        <DCCReference Include="..\SigarComum\src\CadastroFilial.pas">
+            <Form>FrmCadastroFilial</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <None Include="ModelSupport_SigarVendas\default.txaPackage"/>
         <RcItem Include="..\DevLib\Icones\dodge.ico">
             <ResourceType>ICON</ResourceType>

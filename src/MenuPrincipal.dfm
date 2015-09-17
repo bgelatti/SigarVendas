@@ -98,6 +98,10 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
         item
           Visible = True
           ItemName = 'btnAuxiliares'
+        end
+        item
+          Visible = True
+          ItemName = 'dxBarButton2'
         end>
     end
     object btnCadastroPais: TdxBarButton
@@ -144,6 +148,10 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
       Action = ActPesquisaGenerica
       Category = 0
     end
+    object dxBarButton2: TdxBarButton
+      Action = ActFilial
+      Category = 0
+    end
     object btnSair: TdxBarButton
       Action = actSair
       Category = 1
@@ -184,6 +192,11 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
       Category = 'Utilitarios'
       Caption = 'Alterar SQL Pesquisas'
       OnExecute = ActPesquisaGenericaExecute
+    end
+    object ActFilial: TAction
+      Category = 'Cadastro'
+      Caption = 'Filial'
+      OnExecute = ActFilialExecute
     end
   end
   object UniQuery1: TUniQuery
